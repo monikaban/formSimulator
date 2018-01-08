@@ -5,23 +5,22 @@ import { Provider } from 'react-redux'
 import reducer from './reducers'
 
 import qFlow from './QFlow'
-import 'bootstrap/dist/css/bootstrap.css';
+import surveyForm from './SurveyForm'
 
+import 'bootstrap/dist/css/bootstrap.css';
 import TabContainer from './containers/TabContainer'
 
 /*
  * index.js file creates the store for tracking the state of this form  
  */
-
-
 const useLocalStorage = false
 
 let qForm = {}
 
 if(useLocalStorage){
-	 qForm = localStorage.getItem('formState') ? JSON.parse(localStorage.getItem('formState')) : qFlow()	
+	qForm = localStorage.getItem('formState') ? JSON.parse(localStorage.getItem('formState')) : qFlow()	
 } else {
-	qForm = qFlow()
+	qForm = qFlow()  //surveyForm()   
 }
 		
 const store = createStore(reducer, qForm)
