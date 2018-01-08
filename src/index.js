@@ -13,7 +13,7 @@ import TabContainer from './containers/TabContainer'
 /*
  * index.js file creates the store for tracking the state of this form  
  */
-const useLocalStorage = false
+const useLocalStorage = true
 
 let qForm = {}
 
@@ -34,8 +34,6 @@ const rndr = () => ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
-
-//console.log("Main .....:" + JSON.stringify(qForm, ' '))
 
 rndr()
 store.subscribe(() => {
