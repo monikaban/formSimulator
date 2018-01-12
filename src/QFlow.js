@@ -15,8 +15,8 @@ export default function qFlow(){
 			    "1000" : { 
 			      "id" : "1000",
 			      "qText" : "Do you own a Car?",
-		              "conditionOper" : "equals",
-		              "conditionVal" : "Yes",
+			      "conditionOper" : "equals",
+			      "conditionVal" : "Yes",
 			      "respType" : "RADIO",
 			      "help": "",
 			      "defaultVal": "Yes",
@@ -41,9 +41,9 @@ export default function qFlow(){
 			          "vals" : [
 			            ""
 			          ],
-				  "showThis" : false,
-				  "qResp" : "",
-				  "childIds" : [1110,1120]
+			          "showThis" : false,
+			          "qResp" : "",
+			          "childIds" : [1110,1120]
 			      },
 			      "1110" :  {
 			          "id" : "1110",
@@ -59,15 +59,15 @@ export default function qFlow(){
 			            "6",
 			            "8"
 			          ],
-				  "showThis" : false,
-				  "qResp" : "",
+			          "showThis" : false,
+			          "qResp" : "",
 			          "childIds" : [1111]
 			        },
 			        "1111" :  {
 			            "id" : "1111",
 			            "qText" : "Are there any customizations?",
 			            "conditionOper" : "gt",
-				    "conditionVal" : "4",
+			            "conditionVal" : "4",
 			            "respType" : "SELECT",
 			            "help": "",
 			            "defaultVal": "No",
@@ -77,15 +77,15 @@ export default function qFlow(){
 			              "Not sure",
 			              "No"
 			            ],
-				    "showThis" : false,
-				    "qResp" : "",
+			            "showThis" : false,
+			            "qResp" : "",
 			            "childIds" : []
 			        },
 			        "1120":    {
 			              "id" : "1120",
 			              "qText" : "Has your car ever been recalled?",
-				      "conditionOper" : "equals",
-				      "conditionVal" : "Toyota",
+			              "conditionOper" : "equals",
+			              "conditionVal" : "Toyota",
 			              "respType" : "SELECT",
 			              "help": "",
 			              "defaultVal": "No",
@@ -94,12 +94,12 @@ export default function qFlow(){
 			                "Yes",
 			                "No"
 			              ],
-				      "qResp" : "",
-				      "childIds" : [],
-				      "showThis" : false
+			             "qResp" : "",
+			             "childIds" : [],
+			             "showThis" : false
 			          },
 			      "2000":    { 
-				    "id" : "2000",
+			            "id" : "2000",
 			            "qText" : "What is the name of your company?",
 			            "respType" : "TEXT",
 			            "help": "",
@@ -108,12 +108,12 @@ export default function qFlow(){
 			            "vals" : [
 			              ""
 			            ],
-				    "showThis" : true,
-				    "qResp" : "",
+			            "showThis" : true,
+			            "qResp" : "",
 			            "childIds" :[]
 			        },
 			      "3000" : { 
-				  "id" : "3000",
+			          "id" : "3000",
 			          "qText" : "Which year did you graduate from college?",
 			          "respType" : "TEXT",
 			          "help": "",
@@ -122,8 +122,8 @@ export default function qFlow(){
 			          "vals" : [
 			            ""
 			          ],
-				  "showThis" : true,
-				  "qResp" : "",
+			          "showThis" : true,
+			          "qResp" : "",
 			          "childIds" :[]
 			    }
 			  }

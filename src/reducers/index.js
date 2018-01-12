@@ -85,7 +85,7 @@ const addQue = (parentQuesId, locState) => {
 		let childQue =  { "id" : childQuesId.toString(),
 		      "qText" : "",
 		      "conditionOper" : "equals",
-	          "conditionVal" : "Yes",
+		      "conditionVal" : "Yes",
 		      "respType" : "SELECT",
 		      "help": "",
 		      "defaultVal": "Yes",
@@ -97,14 +97,14 @@ const addQue = (parentQuesId, locState) => {
 		    }			
 		   
 		let qs = {...locState.questions,
-		    	[childQuesId.toString()] : childQue
+				[childQuesId.toString()] : childQue
 			}
 		locState = {...locState,
 				questions : qs}
 
 		// lookup question for parentQuesId. In its childIds, append childQuesId 
 		if (parentQuesId != -99 ) {
-			// adding a follwup question
+			// adding a followup question
 			locState.questions[parentQuesId].childIds.push(childQuesId);			
 		} else {
 			// adding root question

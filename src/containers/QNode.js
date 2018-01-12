@@ -11,8 +11,8 @@ export class QNode extends Component {
  * the props object is spread and mapped to state object. Spreading is required for React to capture changes in the next level fields in 'questions'.
  */	
   state = {
-		   ...this.props
-		  }
+           ...this.props
+          }
 /**
  * Set the state to the latest properties being passed to QNode. This is called during initial load and whenever user updates any input field 
  */	  
@@ -71,9 +71,9 @@ export class QNode extends Component {
     let conditionCheck = "";
     if( this.props.respType != 'TEXT' ) { 
     	valField = <Row>
-    				<Col>Values for response :</Col>
-    				<Col sm="9"> <input style= {{width: 20 + 'em'}} type="text" placeholder="For select enter comma separated list"
-    					value={this.state.vals} onChange={this.onChange.bind(this,"vals")} onBlur={this.handleDataChange.bind(this,"vals")} /></Col></Row>
+    			     <Col>Values for response :</Col>
+    			     <Col sm="9"> <input style= {{width: 20 + 'em'}} type="text" placeholder="For select enter comma separated list"
+    					   value={this.state.vals} onChange={this.onChange.bind(this,"vals")} onBlur={this.handleDataChange.bind(this,"vals")} /></Col></Row>
     }
 
     return (
@@ -84,7 +84,7 @@ export class QNode extends Component {
 		      <Card body>
 			      {typeof  parentId !== 'undefined' &&
 				   	  <Row><Col sm="8">Show this when, "{this.state.parentQ}" response </Col>		      	
-				      	<Col sm="2">
+				   	  	<Col sm="2">
 					      <Input type="select" name="condSelect" id="condSelect" value={this.state.conditionOper}
 					                 onChange={this.handleDataChange.bind(this,"conditionOper")}>
 					    	<option value="equals" key="equals">equals</option>
