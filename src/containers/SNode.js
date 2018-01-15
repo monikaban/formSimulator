@@ -48,7 +48,7 @@ export class SNode extends Component {
     let conditionCheck = "";
     if( this.props.respType == 'TEXT' ) { 
     	valField = <Row>
-    				<Col sm="8"> <input style= {{width: 20 + 'em'}} type="text" placeholder="" autoFocus="true" 
+    				<Col sm="8"> <Input style= {{width: 20 + 'em'}} type="text" placeholder="" autoFocus="true" 
     					value={this.state.qResp} onChange={this.onChange.bind(this,"qResp")} onBlur={this.handleDataChange.bind(this,"qResp")} /></Col></Row>
     }
     if( this.props.respType == 'SELECT' ) { 
@@ -60,10 +60,10 @@ export class SNode extends Component {
 				  </Col></Row>
     }
     if( this.props.respType == 'RADIO' ) { 
-		valField= <Row>			     
+		valField= <Row style= {{margin: 10 + 'px'}}>			     
 			    {this.props.vals.map(val =>
 			      <Col key={val} sm="auto">
-				    <input type="radio" key={val} name="respSelect" id={val} value={val}
+				    <Input type="radio" key={val} name="respSelect" id={val} value={val}
 				    	 onChange={this.handleDataChange.bind(this,"qResp")}/> <label>{val}</label>
 				  </Col>
 				)}    						     

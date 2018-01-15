@@ -20,7 +20,7 @@ export class QComp extends Component {
   renderRootQ = qid => {
     return ( 
     		<div key={qid}>
-    		<QNode id={qid}/>
+    		  <QNode id={qid}/>
     		</div>
     )
   }

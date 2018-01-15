@@ -9,35 +9,32 @@ import SNode from './SNode'
 export class SComp extends Component {
 
 	  state = {
-			   ...this.props
-			  }
+		...this.props
+		}
 	  
 	  componentWillReceiveProps(nextProps){
-		  	  console.log("componentWillReceiveProps..new....:" + JSON.stringify(nextProps,'  '));
-		  	  this.setState({ ...nextProps}) // sets the  props on the state
+		  this.setState({ ...nextProps}) // sets the  props on the state
 	  }
 	  
   render() {
     const  {data}  = this.props
-    console.log ('in Scomp : ' + data);
     return (
     <div> 
-    { data.map(qid => this.renderRootQ(qid)) }      
+       { data.map(qid => this.renderRootQ(qid)) }      
     </div>
     )
   }
   
   renderRootQ = qid => {
     return ( 
-    		<div>
+    	<div>
     		<SNode id={qid}/>
-    		</div>
+    	</div>
     )
   }
 }
 
 SComp.propTypes = {
-
 		  renderRootQ: PropTypes.func.isRequired
 	}
 

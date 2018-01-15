@@ -72,7 +72,7 @@ export class QNode extends Component {
     if( this.props.respType != 'TEXT' ) { 
     	valField = <Row>
     			     <Col>Values for response :</Col>
-    			     <Col sm="9"> <input style= {{width: 20 + 'em'}} type="text" placeholder="For select enter comma separated list"
+    			     <Col sm="9"> <Input style= {{width: 20 + 'em'}} type="text" placeholder="For select enter comma separated list"
     					   value={this.state.vals} onChange={this.onChange.bind(this,"vals")} onBlur={this.handleDataChange.bind(this,"vals")} /></Col></Row>
     }
 
@@ -92,7 +92,7 @@ export class QNode extends Component {
 					    	<option value="gt" key="gt">greater than</option>
 					      </Input>
 					    </Col>
-				      	<Col sm="2"> <input style= {{width: 5 + 'em'}} type="text" placeholder="responsevalue" value={this.state.conditionVal} 
+				      	<Col sm="2"> <Input style= {{width: 5 + 'em'}} type="text" placeholder="responsevalue" value={this.state.conditionVal} 
 				      		onChange={this.onChange.bind(this,"conditionVal")}  onBlur={this.handleDataChange.bind(this,"conditionVal")}/></Col>		      	
 			      	  </Row>
 			         }
@@ -101,7 +101,7 @@ export class QNode extends Component {
 			      }
 			      
 			      <Row><Col >Question  ({this.state.id}) </Col><Col sm="9">
-			      		  <input style= {{width: 30 + 'em'}} type="text" placeholder="Enter Question" name="q1"
+			      		  <Input style= {{width: 30 + 'em'}} type="text" placeholder="Enter Question" name="q1"
 			      			   value={this.state.qText} onChange={this.onChange.bind(this,"qText")} onBlur={this.handleDataChange.bind(this,"qText")} // on focus out
 			      		   /><br/></Col></Row>
 			      		   

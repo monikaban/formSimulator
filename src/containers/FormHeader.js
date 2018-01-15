@@ -3,7 +3,7 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Input } from 'reactstrap';
 import { bindActionCreators } from 'redux'
 
 export class FormHeader extends Component {
@@ -45,14 +45,14 @@ export class FormHeader extends Component {
   render() {
     const  header  = this.props
     return (
-      <div>
+      <div style= {{margin: 20 + 'px'}}>
       <Row><Col sm="2">Form Name </Col><Col sm="4">  
-      		<input style= {{width: 20 + 'em'}} type="text" placeholder="Form name" autoFocus="true" 
+      		<Input style= {{width: 20 + 'em'}} type="text" placeholder="Form name" autoFocus="true" 
 			  	value={this.state.formName} 
       		    onChange={this.onChange.bind(this,"formName")}  onBlur={this.handleDataChange.bind(this,"formName")}/>
       	</Col>
       	<Col sm="2">Form Code </Col><Col sm="4"> 
-      		<input style= {{width: 10 + 'em'}} type="text" placeholder="Form name" 
+      		<Input style= {{width: 10 + 'em'}} type="text" placeholder="Form name" 
       			value={this.state.formShortCode} 
       		    onChange={this.onChange.bind(this,"formShortCode")}  onBlur={this.handleDataChange.bind(this,"formShortCode")}/>
         </Col>
@@ -61,8 +61,7 @@ export class FormHeader extends Component {
        <Col sm="3"><a href="#" // eslint-disable-line jsx-a11y/href-no-hash
 	          onClick={this.handleAddRootQClick}  > Add Question </a>
 	   </Col>
-       <Col>
-       </Col>
+
        </Row>
       </div>
     )

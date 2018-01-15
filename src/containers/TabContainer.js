@@ -59,15 +59,13 @@ export default class TabContainer extends Component {
        </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <Row>
-            <Col sm="1"></Col>
-            <Col sm="11">
-                <FormHeader />
+            <Row>        
+            <Col>
+              <FormHeader />
             </Col>
           </Row>
-            <Row>
-            <Col sm="1"></Col>
-              <Col sm="11">
+            <Row>       
+              <Col>
               <Card body>
               <CardTitle>Form Details</CardTitle>
                 <QComp />
@@ -76,9 +74,8 @@ export default class TabContainer extends Component {
             </Row>          
            </TabPane>
           <TabPane tabId="2">
-            <Row>
-            <Col sm="1"></Col>
-            <Col sm="11">
+            <Row>       
+            <Col>
             <Card body>
              <CardTitle><SFormHeader/></CardTitle>
               <SComp />
