@@ -60,12 +60,15 @@ export class SNode extends Component {
 				  </Col></Row>
     }
     if( this.props.respType == 'RADIO' ) { 
+    	
 		valField= <Row style= {{margin: 10 + 'px'}}>			     
-			    {this.props.vals.map(val =>
-			      <Col key={val} sm="auto">
+			    {this.props.vals.map(val => {
+			      let selected = this.state.qResp == val ? "checked" : ""
+			      return <Col key={val} sm="auto">
 				    <Input type="radio" key={val} name="respSelect" id={val} value={val}
-				    	 onChange={this.handleDataChange.bind(this,"qResp")}/> <label>{val}</label>
-				  </Col>
+				    	 onChange={this.handleDataChange.bind(this,"qResp")}
+				     checked={selected} /> <label>{val}</label>
+				  </Col>}
 				)}    						     
 			</Row>
     }

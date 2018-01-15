@@ -103,7 +103,7 @@ export class QNode extends Component {
 			      <Row><Col >Question  ({this.state.id}) </Col><Col sm="9">
 			      		  <Input style= {{width: 30 + 'em'}} type="text" placeholder="Enter Question" name="q1"
 			      			   value={this.state.qText} onChange={this.onChange.bind(this,"qText")} onBlur={this.handleDataChange.bind(this,"qText")} // on focus out
-			      		   /><br/></Col></Row>
+			      		   /></Col></Row>
 			      		   
 			      <Row><Col sm="3">Response Type </Col><Col sm="2">
 				      <Input type="select" name="select" id="exampleSelect" defaultValue={this.props.respType}
